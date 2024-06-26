@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /* colors */
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* font */
+  --ff-primary: "Fraunces", sans-serif;
+  --ff-secondary: "Montserrat", sans-serif;
+
+  /* font weights */
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /* font size */
+  --fs-primary: 1.4rem;
+
+  /* sizes (margin/padding) */
+  --size-100: 0.5rem;
+  --size-200: 1rem;
+  --size-300: 1.5rem;
+  --size-400: 2rem;
+  --size-500: 3rem;
+  --size-600: 4rem;
+  --size-700: 5rem;
+  --size-800: 6rem;
+}
+
+body {
+  background-color: var(--clr-cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__image__inner {
+  width: 100%;
+  display: block;
+}
+
+.card {
+  display: flex;
+  max-width: 54rem;
+  /* background-color: var(--clr-white); */
+}
+
+.card__info {
+  background-color: var(--clr-white);
+  border-top-right-radius: var(--size-200);
+  border-bottom-right-radius: var(--size-200);
+  padding: 3rem;
+  width: 27rem;
+}
+
+.card__image {
+  width: 27rem;
+  background-image: url("/images/image-product-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-top-left-radius: var(--size-200);
+  border-bottom-left-radius: var(--size-200);
+}
+
+.card__info--description {
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--clr-dark-grayish-blue);
+  font-family: var(--ff-secondary);
+}
+
+.card__info--title {
+  font-size: var(--size-500);
+  line-height: 3rem;
+  padding-bottom: 2rem;
+  font-family: var(--ff-primary);
+}
+
+.card__info--paragraph {
+  font-size: 1.3rem;
+  font-weight: var(--fw-500);
+  font-family: var(--ff-secondary);
+  color: var(--clr-dark-grayish-blue);
+  padding-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.card__info__price {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card__info__price--main {
+  font-size: 2.8rem;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-700);
+  color: var(--clr-dark-cyan);
+}
+
+.card__info__price--old {
+  font-size: 1.2rem;
+  font-weight: var(--fw-500);
+  color: var(--clr-dark-grayish-blue);
+  text-decoration: line-through;
+  font-family: var(--ff-secondary);
+}
+
+.card__info--cart {
+  text-decoration: none;
+}
+
+.card__info__link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-700);
+  background-color: var(--clr-dark-cyan);
+  color: var(--clr-white);
+  padding: 1.2rem 5.6rem;
+  border-radius: var(--size-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s;
+}
+
+.card__info__link:hover {
+  background-color: var(--clr-very-dark-blue);
+}
+
+@media (min-width: 320px) {
+  body {
+    align-items: unset;
+    height: unset;
+  }
+  .card {
+    flex-direction: column;
+    padding: 2.8rem 0;
+    width: 90%;
+  }
+  .card__image {
+    background-image: url("/images/image-product-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 60%;
+    width: 100%;
+    border-top-right-radius: var(--size-200);
+    border-bottom-left-radius: unset;
+  }
+  .card__info {
+    border-top-right-radius: unset;
+    border-bottom-left-radius: var(--size-200);
+    width: 100%;
+    padding: 2.6rem;
+  }
+  .card__info--description {
+    padding-bottom: 1.5rem;
+  }
+
+  .card__info--title {
+    padding-bottom: 1.5rem;
+  }
+  .card__info--price {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  .card__image {
+    background-image: url("/images/image-product-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: unset;
+    border-top-left-radius: var(--size-200);
+    border-bottom-left-radius: var(--size-200);
+  }
+
+  .card__info {
+    border-bottom-left-radius: unset;
+    border-top-right-radius: var(--size-200);
+  }
+}
