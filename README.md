@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/product-preview-card-13KahnoSc9
 - Live Site URL: https://danieldeaconescu.github.io/product_preview_card/
 
 
